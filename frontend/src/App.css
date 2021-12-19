@@ -3,7 +3,7 @@
 }
 
 html {
-  background-color: #232123;
+  background-color: #ffffff;
 }
 
 .App-banner {
@@ -13,7 +13,7 @@ html {
   display: flex;
   flex-direction: row;
   max-height: 10vh;
-  color: white;
+  color: #1B295E;
 }
 
 .App-header {
@@ -22,7 +22,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #1B295E;
 }
 
 .App-logo {
@@ -35,6 +35,7 @@ html {
   margin-left: 1.5vh;
   font-size: 3vh;
   font-weight: 1;
+  color: #00AEE9;
 }
 
 .App-link {

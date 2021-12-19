@@ -32,7 +32,7 @@
 }
 
 .accordion__button {
-    background-color: #232123;
+    background-color: #758796;
     color: #f4f4f4;
     cursor: pointer;
     padding: 18px;
@@ -42,7 +42,7 @@
 }
 
 .accordion__button:hover {
-    background-color: #444;
+    background-color: #758796;
 }
 
 .accordion__button:before {
@@ -85,11 +85,11 @@
 }
 
 code {
-    color: #7CFC00;
+    color: #00AEE9;
 }
 
 a {
-  color: #7CFC00;
+  color: #00AEE9;
 }
 
 /* -------------------------------------------------- */

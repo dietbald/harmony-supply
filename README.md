@@ -1,14 +1,14 @@
-# Polygon mainnet faucet server/frontend
+# Harmony mainnet faucet server/frontend
 
-App available at https://matic.supply
+App available at https://harmony.supply soon
 
-built upon: [locals-faucetserver](https://github.com/sponnet/locals-faucetserver) and [matic-faucet](https://github.com/nglglhtr/matic-faucet)
+built upon: [polygon-faucet](https://github.com/TamtamHero/polygon-faucet) 
 
-supports MATIC transfers on Polygon mainnet
+supports ONE transfers on Harmony mainnet
 
-- payout frequency: 120 seconds
+- payout frequency: 1800 seconds
 - server check frequency: 10 seconds
-- max amount on account to be able to claim: 0.005 MATIC (same as payout)
+- max amount on account to be able to claim: 0.01 ONE (same as payout)
 
 (configured in `server/config.json`)
 
@@ -19,9 +19,9 @@ address and ip are 'greylisted' right after a successful transaction - for 60 se
 # installing
 
 ```
-$ git clone https://github.com/tamtamhero/matic-faucet
-$ cd matic-faucet && cd server && npm install
-$ cd .. && cd client && npm install
+$ git clone https://github.com/dietbald/harmony-supply.git
+$ cd harmony-supply && cd server && npm install
+$ cd .. && cd frontend && npm install
 $ cd ..
 ```
 
@@ -61,22 +61,16 @@ edit the file `client/src/config.js` and specify the base URL for your API. Run 
 }
 ```
 
-### ```POST https://<FAUCET-URL>```
-```
-{
-	network: "rpc-mainnet",
-	token: "matic",
-	account: "0xCC2161DB3200EEF7E37E21542dA2F0179fB9c59A"
-}
-```
+### ```GET https://<FAUCET-URL>/harmony/one/:address/:captcha```
+
 
 - #### Network Name
 |name|RPC|
 |---|---|
-|`rpc-mainnet`|`https://rpc-mainnet.matic.network`|
+|`rpc-mainnet`|`https://api.harmony.one`|
 
-- #### Polygon address
-your polygon address
+- #### Harmony address
+your Harmony address
 
 #### Response format
 Status code: 200
@@ -97,7 +91,7 @@ Status code: 500
 
 ## Example Usage
 
-`curl http://localhost:3000/rpc-mainnet/matic/0x96C42C56fdb78294F96B0cFa33c92bed7D75F96a`
+`curl http://localhost:3000/0x96C42C56fdb78294F96B0cFa33c92bed7D75F96a`
 
 
 ## HTTP Return / error codes

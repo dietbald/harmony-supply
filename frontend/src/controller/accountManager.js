@@ -2,7 +2,8 @@ import Web3 from "web3";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 
-const MATIC_NETWORK = 137;
+const HARMONY_MAIN_NETWORK = 1666600000;
+const HARMONY_TEST_NETWORK = 1666700000;
 
 class AccountManager {
   constructor() {
@@ -20,15 +21,15 @@ class AccountManager {
         walletconnect: {
           package: WalletConnectProvider, // required
           options: {
-            infuraId: "INFURA_ID" // required
-          }
-        }
+            infuraId: "https://api.harmony.one", // required
+          },
+        },
       };
 
       const web3Modal = new Web3Modal({
         network: "mainnet", // optional
         cacheProvider: true, // optional
-        providerOptions // required
+        providerOptions, // required
       });
 
       this.web3Provider = await web3Modal.connect();
@@ -44,7 +45,11 @@ class AccountManager {
       }
       this.web3 = new Web3(this.web3Provider);
       this.network = await this.web3.eth.net.getId();
-      if(this.network == MATIC_NETWORK){
+      console.log(this.network);
+      if (
+        this.network === HARMONY_MAIN_NETWORK ||
+        this.network === HARMONY_TEST_NETWORK
+      ) {
         this.connected = true;
         console.log(`connected: ${this.account} ${typeof this.account}`);
         return this.account;
@@ -52,13 +57,14 @@ class AccountManager {
     }
   }
 
-  getFormattedBalance(balance, decimals){
+  getFormattedBalance(balance, decimals) {
+    if (!balance) return "";
     let balance_BN = this.web3.utils.toBN(balance);
-    let decimals_BN = this.web3.utils.toBN(10**decimals);
+    let decimals_BN = this.web3.utils.toBN(10 ** decimals);
     let before_comma = balance_BN.div(decimals_BN).toString();
     let after_comma = balance_BN.mod(decimals_BN).toString();
     after_comma = after_comma.padStart(decimals, "0");
-    return before_comma + "." + after_comma + " MATIC";
+    return before_comma + "." + after_comma + " ONE";
   }
 
   async getBalance(formatted = true) {
@@ -67,7 +73,6 @@ class AccountManager {
     this.formatted_balance = this.getFormattedBalance(this.balance, decimals);
     return formatted ? this.formatted_balance : this.balance;
   }
-
 }
 
 export default AccountManager;

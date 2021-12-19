@@ -3,15 +3,15 @@
   "checkfreqinsec": 10,
   "greylistdurationinsec": 120,
   "claimintervalinsec": 1800,
-  "hcaptchasecret": "YOUR_HCAPTCHA_SECRET",
+  "hcaptchasecret": "",
   "networks": {
     "rpc-mainnet": {
-      "rpc": "https://rpc-mainnet.matic.network",
-      "explorer": "https://polygonscan.com",
-      "privateKey": "YOUR_PRIVATE_KEY",
+      "rpc": "https://api.harmony.one",
+      "explorer": "https://explorer.harmony.one/#/",
+      "privateKey": "",
       "tokens": {
-        "matic": {
-          "payoutamount": 0.0005,
+        "one": {
+          "payoutamount": 0.001,
           "maxbalance": 1000000000000000
         }
       }

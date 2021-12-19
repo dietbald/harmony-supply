@@ -11,7 +11,7 @@ app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded())
 
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://matic.supply');
+    //res.setHeader('Access-Control-Allow-Origin', 'https://harmony.supply');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
@@ -19,9 +19,9 @@ app.use(function (req, res, next) {
 });
 
 https.createServer({
-    key: fs.readFileSync('privkey.pem'),
+   /* key: fs.readFileSync('privkey.pem'),
     cert: fs.readFileSync('cert.pem'),
-    ca: fs.readFileSync('chain.pem')
+    ca: fs.readFileSync('chain.pem') */
 }, app).listen(3000, () => {
     console.log('Listening...')
 })
@@ -45,10 +45,10 @@ const dbAddress = level(
 );
 
 const db = {}
-db['matic'] = dbEthExceptions
+db['one'] = dbEthExceptions
 
 const addr_db = {}
-addr_db['matic'] = dbAddress
+addr_db['one'] = dbAddress
 
 const greylistduration = config.greylistdurationinsec * 1000; // time in ms
 const claimintervalinsec = config.claimintervalinsec * 1000; // time in ms
@@ -105,7 +105,7 @@ async function getFaucetBalance() {
         let rEth = await getEthBalance(web3)
 
         balances.push({
-            "network": web3.currentProvider.host.replace("https://", "").replace(".matic.network", ""),
+            "network": web3.currentProvider.host.replace("https://", "").replace(".harmony.one", ""),
             "account": web3.eth.accounts.wallet[0].address,
             "balanceEth": web3.utils.fromWei(rEth, 'ether')
         });
@@ -251,7 +251,7 @@ function cleanupExceptions(token) {
 
 // exception monitor
 setInterval(() => {
-    cleanupExceptions('matic')
+    cleanupExceptions('one')
 }, config.checkfreqinsec * 100);
 
 const axios_config = {
@@ -346,7 +346,7 @@ async function startTransfer(ip, address, token, amount, network) {
 }
 
 async function _startTransfer(address, token, amount, network) {
-    if (token === 'matic') return transferEth(address, amount, network)
+    if (token === 'one') return transferEth(address, amount, network)
 }
 
 async function transferEth(_to, _amount, network) {
