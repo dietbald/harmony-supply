@@ -6,7 +6,7 @@ async function claimFaucet(account, captcha) {
   let apiUrl = config.get("apiurl");
   console.log("Sending request...", apiUrl);
 
-  var data = JSON.stringify({ address: account, captcha: captcha });
+  var data = JSON.stringify({ address: account[0], captcha: captcha });
 
   return await axios
     .post(apiUrl, data, {
