@@ -136,7 +136,7 @@ function App() {
             </a>
           </p>
           <p>
-            Ethereum/Harmony donation: 
+            Harmony donation: 
             <a
               h
               href="https://explorer.harmony.one/address/0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7"
