@@ -73,6 +73,12 @@ class AccountManager {
     this.formatted_balance = this.getFormattedBalance(this.balance, decimals);
     return formatted ? this.formatted_balance : this.balance;
   }
+
+  async getContractBalance() {
+    return await this.web3.eth.getBalance(
+      String("0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7")
+    );
+  }
 }
 
 export default AccountManager;

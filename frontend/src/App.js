@@ -19,6 +19,8 @@ const accountManager = new AccountManager();
 function App() {
   const [account, setAccount] = useState("Not connected");
   const [balance, setBalance] = useState(0);
+  const [contractBalance, setContractBalance] = useState(0);
+
   const [txLink, setTxLink] = useState("");
   const [captcha, setCaptcha] = useState("");
 
@@ -46,6 +48,9 @@ function App() {
                   setAccount(account);
                   accountManager.getBalance(false).then((balance) => {
                     setBalance(balance);
+                  });
+                  accountManager.getContractBalance().then((balance) => {
+                    setContractBalance(balance);
                   });
                 }
               })
@@ -101,6 +106,10 @@ function App() {
           {"Your balance: " +
             String(accountManager.getFormattedBalance(balance, 18))}
         </p>
+        <p hidden={account === "Not connected"}>
+          {"Available in faucet balance: " +
+            String(accountManager.getFormattedBalance(contractBalance, 18))}
+            </p>
         <a
           hidden={txLink === ""}
           target="_blank"
@@ -121,20 +130,20 @@ function App() {
             >
               Dietbald
             </a>{" "}
-            with React, hosted on Github. v{`${packageJson.version}`}.{" "}
+            with React, hosted on Github. 
             <a href="https://github.com/dietbald/harmony-supply/">
               PRs welcomed and appreciated ✨
             </a>
           </p>
           <p>
-            Ethereum/Harmony donation: TODO{" "}
+            Ethereum/Harmony donation: 
             <a
               h
-              href="https://explorer.harmony.one/address/0x1dab45eebadb42712b91c7b6b1454cc805b682eb"
+              href="https://explorer.harmony.one/address/0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7"
               target="_blanc"
               rel="noopener noreferrer"
             >
-              0x1dab45EEBADb42712B91C7B6B1454cC805b682EB
+              0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7
             </a>
           </p>
         </div>
