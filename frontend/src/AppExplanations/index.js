@@ -42,12 +42,13 @@ export default function AppExplanations() {
     With `0.01 ONE`, you can do `100` basic transactions on Harmony network ! You can even deposit or withdraw funds on `Tranquil`, even though it is a pretty expensive transaction (`50$+` on Ethereum, `1$+` on Binance Smart Chain). \n\
     The goal of this faucet is not to make you rich but just to make the onboarding to Harmony smoother.  \n\
     You can use it up to `3 times a day`, for the most clumsy of us 🙄  \n\
-    Feel free to send some spare change at `TODO` to replenish the faucet once you're rich";
+    Feel free to send some spare change at `0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7` to replenish the faucet once you're rich";
 
   const howToEarnMoreMatic_help =
     "* First bring your assets from Ethereum to Harmony through [the bridge](https://bridge.harmony.one/)  \n\
     Then there's a variety of things you can do:  \n\
-    * Swapping assets on [Viperswap](https://viper.exchange/) or [Sushiswap](https://app.sushi.com/swap), the equivalents of `Uniswap` on Harmony  \n\
+    * Play [CryptoRoyale](https://cryptoroyale.one/) to earn the ROY token which can be swapped on [Viperswap](https://viper.exchange/) for ONE \n\
+    * Swap to other assets on [Sushiswap](https://app.sushi.com/swap), the equivalents of `Uniswap` on Harmony  \n\
     [Openswap](https://app.openswap.one/) is also available and will route your swaps through the cheapest path.  \n\
     * Depositing your assets on [Tranquil](https://app.tranquil.finance/) or [Curve](https://harmony.curve.fi/) to farm some fresh ONE  \n\
     * Enjoy the same functionalities Ethereum has, only with less friction \n\
