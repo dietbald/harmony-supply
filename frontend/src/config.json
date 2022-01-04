@@ -1,6 +1,6 @@
 {
   "apiurl": "https://pwerzv9wd7.execute-api.ap-southeast-1.amazonaws.com/default/web3Test",
   "explorer": "https://explorer.harmony.one/",
-  "maxAmount": 1,
+  "maxAmount": 5000000000000000,
   "hcaptchasitekey": "02bbdd83-1007-4e34-bd51-84ef019d5d65"
 }
