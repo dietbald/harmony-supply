@@ -1,6 +1,7 @@
 import Web3 from "web3";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
+const contract_abi = require("./ABI.json");
 
 const HARMONY_MAIN_NETWORK = 1666600000;
 const HARMONY_TEST_NETWORK = 1666700000;
@@ -12,6 +13,10 @@ class AccountManager {
     this.web3Provider = null;
     this.web3 = null;
     this.balance = 0;
+    this.distributorBalance = 0;
+    this.smartContractBalance = 0;
+    this.harmonySupplyContract = null;
+
     this.network = 0;
   }
 
@@ -69,15 +74,49 @@ class AccountManager {
 
   async getBalance(formatted = true) {
     const decimals = 18;
+    console.log("address", String(this.account));
     this.balance = await this.web3.eth.getBalance(String(this.account));
     this.formatted_balance = this.getFormattedBalance(this.balance, decimals);
     return formatted ? this.formatted_balance : this.balance;
   }
 
-  async getContractBalance() {
-    return await this.web3.eth.getBalance(
-      String("0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7")
+  async getDistributorBalance() {
+    this.distributorBalance = await this.web3.eth.getBalance(
+      "0xa5e299b65e6ffbc1768c4b489aecefc99111e737"
     );
+    return this.distributorBalance;
+  }
+
+  loadContractIfNeeded() {
+    if (!this.harmonySupplyContract) {
+      this.harmonySupplyContract = new this.web3.eth.Contract(
+        contract_abi,
+        "0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7"
+      );
+    }
+  }
+
+  async getContractBalance() {
+    this.loadContractIfNeeded();
+
+    return await this.harmonySupplyContract.methods.getBalance().call();
+
+    //return await this.web3.eth.getBalance(this.harmonySupplyContract.address);
+  }
+
+  async getNumberOfDonationsRemaining() {
+    this.loadContractIfNeeded();
+    return await this.harmonySupplyContract.methods
+      .numberOfDonationsRemaining()
+      .call();
+  }
+  async getNumberOfDonationsToday() {
+    this.loadContractIfNeeded();
+    return await this.harmonySupplyContract.methods
+      .totalDonationsPerDay(
+        await this.harmonySupplyContract.methods.getday().call()
+      )
+      .call();
   }
 }
 

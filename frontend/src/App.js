@@ -19,6 +19,11 @@ const accountManager = new AccountManager();
 function App() {
   const [account, setAccount] = useState("Not connected");
   const [balance, setBalance] = useState(0);
+  const [remainingDonations, setRemainingDonations] = useState(0);
+  const [givenDonationsToday, setGivenDonationsToday] = useState(0);
+
+
+  const [distributorBalance, setDistributorBalance] = useState(0);
   const [contractBalance, setContractBalance] = useState(0);
 
   const [txLink, setTxLink] = useState("");
@@ -49,8 +54,25 @@ function App() {
                   accountManager.getBalance(false).then((balance) => {
                     setBalance(balance);
                   });
+                  accountManager
+                    .getNumberOfDonationsRemaining()
+                    .then((donations) => {
+                      setRemainingDonations(donations);
+                    });
+
+                    accountManager
+                    .getNumberOfDonationsToday()
+                    .then((donations) => {
+                      setGivenDonationsToday(donations);
+                    });
+
+                    
+
                   accountManager.getContractBalance().then((balance) => {
                     setContractBalance(balance);
+                  });
+                  accountManager.getDistributorBalance().then((balance) => {
+                    setDistributorBalance(balance);
                   });
                 }
               })
@@ -60,6 +82,8 @@ function App() {
             text={
               Number(balance) >= config.get("maxAmount")
                 ? "Balance too high"
+                : remainingDonations < 1
+                ? "No donations left"
                 : "Receive"
             }
             loadingText="Sending..."
@@ -78,6 +102,7 @@ function App() {
                     accountManager.getBalance(false).then((balance) => {
                       setBalance(balance);
                     });
+
                     setCaptcha("");
                   } else {
                     toast.error(
@@ -101,15 +126,23 @@ function App() {
             }}
           />
         </form>
-        <p hidden={account === "Not connected"}>{account}</p>
+
+        <p hidden={account === "Not connected"}>{"Your Wallet address : " + account}</p>
         <p hidden={account === "Not connected"}>
           {"Your balance: " +
             String(accountManager.getFormattedBalance(balance, 18))}
         </p>
         <p hidden={account === "Not connected"}>
-          {"Available in faucet balance: " +
-            String(accountManager.getFormattedBalance(contractBalance, 18))}
-            </p>
+          {"There are " +
+            String(remainingDonations) +
+            " donations left for today"}
+          {remainingDonations < 1 ? ", try again tomorrow or ask for donations" : ""}
+        </p>
+
+        <p hidden={account === "Not connected"}>
+          {"Today harmony.supply donated " +
+            String(accountManager.getFormattedBalance(givenDonationsToday, 18))}
+        </p>
         <a
           hidden={txLink === ""}
           target="_blank"
@@ -130,13 +163,13 @@ function App() {
             >
               Dietbald
             </a>{" "}
-            with React, hosted on Github. 
+            with React, hosted on Github.
             <a href="https://github.com/dietbald/harmony-supply/">
               PRs welcomed and appreciated ✨
             </a>
           </p>
           <p>
-            Harmony donation: 
+            Harmony donation:
             <a
               h
               href="https://explorer.harmony.one/address/0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7"
@@ -145,6 +178,18 @@ function App() {
             >
               0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7
             </a>
+          </p>
+
+          <p hidden={account === "Not connected"}>
+            {"Available in faucet balance: " +
+              String(accountManager.getFormattedBalance(contractBalance, 18))}
+          </p>
+
+          <p hidden={account === "Not connected"}>
+            {"Available in distributor balance: " +
+              String(
+                accountManager.getFormattedBalance(distributorBalance, 18)
+              )}
           </p>
         </div>
       </header>
