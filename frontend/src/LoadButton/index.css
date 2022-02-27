@@ -10,8 +10,8 @@
 
 @media only screen and (orientation: landscape) {
   .BackupButton {
-    width: 15vw;
-    height: 10vw;
+    width: 12vw;
+    height: 8vw;
     font-size: 3vw;
   }
 }

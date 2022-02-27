@@ -60,14 +60,14 @@ html {
 
 @media only screen and (orientation: landscape) {
   .App-footer {
-    margin-top: 6vh;
+    margin-top: 4vh;
     font-size: 1.2vh;
   }
 }
 
 @media only screen and (orientation: portrait) {
   .App-footer {
-    margin-top: 6vw;
+    margin-top: 4vw;
     font-size: 1.2vw;
   }
 }
