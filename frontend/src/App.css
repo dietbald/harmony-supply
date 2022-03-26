@@ -54,9 +54,8 @@ background-position: 0% 50%
 }
 
 .App-banner {
-  margin-top: 0vh;
+  margin-top: 7vh;
   margin-bottom: 7vh;
-  margin-right: -0vh;
   justify-content: center;
   display: flex;
   flex-direction: row;
@@ -72,7 +71,8 @@ background-position: 0% 50%
   color: #1B295E;
   background-color: rgb(255, 255, 255);
   border-radius: 50px;
-  width:50%;
+  max-width: fit-content;
+  min-width: none;
   margin:0 auto;
 }
 
@@ -81,35 +81,47 @@ background-position: 0% 50%
   margin: 10px auto 20px;
   margin-right: 30px;
   pointer-events: all;
+  width: 12%;
+  height: 12%;
 }
 
 .intrepidLogo{
-  width: 10vh;
-  margin: 10px auto 10px;
-  margin-right: 60px;
+  margin: 10px auto 20px;
+  margin-left: 20px;
+  margin-right: 30px;
   pointer-events: all;
+  width: 15%;
+  
 }
 
 .harmonyLogo{
   margin: 10px auto 20px;
-  margin-left: 45px;
+  margin-left: 20px;
+  margin-right: 30px;
   pointer-events: all;
+  width: 12%;
+  height: 11%;
   ;
 }
 
 .App-logo {
   width: 10vh;
-  height: 15;
-  margin-top: -2vh;
+  height: auto;
   pointer-events: none;
   
 }
 
 .App-title {
-  margin-left: 1.5vh;
   font-size: 5.5vh;
   font-weight: 600;
   color: #000000;
+  -webkit-text-size-adjust: auto;
+  text-size-adjust: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .App-link {
@@ -136,14 +148,18 @@ background-position: 0% 50%
 
 @media only screen and (orientation: landscape) {
   .App-footer {
-    margin-top: 4vh;
-    font-size: 1.2vh;
+    width: 40vw;
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media only screen and (orientation: portrait) {
   .App-footer {
-    margin-top: 4vw;
-    font-size: 1.2vw;
+    width: 83vw;
+    font-size: 1.2vh;
+    display: flex;
+    flex-direction: column;
   }
 }

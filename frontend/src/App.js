@@ -170,28 +170,28 @@ function App() {
         <br/>
         <AppExplanations></AppExplanations>
         <div className="App-footer">
-          
-            <a 
+           <div>
+             <a
             href="https://staking.harmony.one/validators/mainnet/one1rfzf38ymc447qhmgrhcglewctl5nj9u6q6syjk"
               target="_blank"
               rel="noopener noreferrer">
               <img src={intrepid} className="intrepidLogo" alt="logo"/>
-            </a>
+             </a>
 
-            <a 
+            <a
             href="https://github.com/dietbald"
               target="_blank"
               rel="noopener noreferrer">
-              <img src={dietbald} width="80" height="80" className="dietbaldLogo" alt="logo"/>
+              <img src={dietbald} className="dietbaldLogo" alt="logo"/>
             </a>
 
-            <a 
+            <a
             href="https://www.harmony.one/"
               target="_blank"
               rel="noopener noreferrer">
-              <img src={harmony} width="80" height="80" className="harmonyLogo" alt="logo"/>
+              <img src={harmony} className="harmonyLogo" alt="logo"/>
             </a>
-
+           </div>
 
           
           <p>

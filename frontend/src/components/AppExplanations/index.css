@@ -4,26 +4,25 @@
     font: Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace;
     border: 2px solid rgba(134, 134, 134, 0.733);
     border-radius: 4px;
-
-    
-  
-    
-    
   }
 
 @media only screen and (orientation: landscape) {
   .accordion {
-    width: 70vw;
+    width: 40vw;
     font-size: 1.2vw;
-    width: 49.5vw;
+    display: flex;
+    flex-direction: column;
   
+    
   }
 }
 
 @media only screen and (orientation: portrait) {
   .accordion {
-    width: 90vw;
+    width: 83vw;
     font-size: 1.2vh;
+    display: flex;
+    flex-direction: column;
 
   }
 }
@@ -40,7 +39,7 @@
     color: #f4f4f4;
     cursor: pointer;
     padding: 18px;
-    text-align: center;
+    text-align: left;
     border: none;
     transition: 0.3s;
     opacity: 1;
