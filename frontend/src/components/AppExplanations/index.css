@@ -1,0 +1,115 @@
+
+.accordion {
+    text-align: left;
+    font: Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace;
+    border: 2px solid rgba(134, 134, 134, 0.733);
+    border-radius: 4px;
+
+    
+  
+    
+    
+  }
+
+@media only screen and (orientation: landscape) {
+  .accordion {
+    width: 70vw;
+    font-size: 1.2vw;
+    width: 49.5vw;
+  
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .accordion {
+    width: 90vw;
+    font-size: 1.2vh;
+
+  }
+}
+
+
+.accordion__item + .accordion__item {
+    border-top: 3px solid rgba(133, 133, 133, 0.685);
+    border-radius: 2px;
+
+}
+
+.accordion__button {
+    background-color: rgb(46, 43, 43);
+    color: #f4f4f4;
+    cursor: pointer;
+    padding: 18px;
+    text-align: center;
+    border: none;
+    transition: 0.3s;
+    opacity: 1;
+    
+}
+
+.accordion__button:hover {
+    background-color: #758796;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 1vh;
+    width: 1vh;
+    margin-right: 12px;
+    border-bottom: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+@media only screen and (orientation: landscape) {
+  .accordion__button:before {
+    height: 1vw;
+    width: 1vw;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .accordion__button:before {
+    height: 1vh;
+    width: 1vh;
+  }
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+    
+}
+
+[hidden] {
+    display: none;
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+    
+}
+
+code {
+  color: rgb(0, 174, 233);
+}
+
+a {
+  color: rgb(0, 174, 233);
+}
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
