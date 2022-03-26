@@ -5,9 +5,9 @@ const particlesConfig = {
   },
   "particles": {
     "number": {
-      "value": 90,
+      "value": 300,
       "density": {
-        "enable": true,
+        "enable": false,
         "value_area": 900
       }
     },
@@ -51,7 +51,7 @@ const particlesConfig = {
     },
     "line_linked": {
       "enable": true,
-      "distance": 170,
+      "distance": 150,
       "color": "#272727",
       "opacity": 0.4,
       "width": 1
@@ -65,7 +65,7 @@ const particlesConfig = {
       "out_mode": "out",
       "bounce": true,
       "attract": {
-        "enable": true,
+        "enable": false,
         "rotateX": 600,
         "rotateY": 1200
       }
@@ -79,7 +79,7 @@ const particlesConfig = {
         "mode": "repulse"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "resize": true
