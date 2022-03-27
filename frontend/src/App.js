@@ -60,7 +60,7 @@ function App() {
               accountManager.connect().then((account) => {
                 if (!account) {
                   toast.error(
-                    `Wrong network: Please select ONE/Harmony network first`
+                    `Wrong network: Please select ONE/Harmony network first.`
                   );
                 } else {
                   setAccount(account);
@@ -139,7 +139,7 @@ function App() {
         </form>
 
         <p hidden={account === "Not connected"}>
-          {"Your Wallet address : " + account}
+          {"Your Wallet : " + account}
         </p>
         <p hidden={account === "Not connected"}>
           {"Your balance: " +
@@ -148,14 +148,14 @@ function App() {
         <p hidden={account === "Not connected"}>
           {"There are " +
             String(remainingDonations) +
-            " donations left for today"}
+            " donations left for today."}
           {remainingDonations < 1
-            ? ", try again tomorrow or ask for donations"
+            ? ", try again tomorrow or ask for community donations"
             : ""}
         </p>
 
         <p hidden={account === "Not connected"}>
-          {"Today harmony.supply donated " +
+          {"Today's total Faucet withdrawal: " +
             String(accountManager.getFormattedBalance(givenDonationsToday, 18))}
         </p>
 
@@ -205,7 +205,7 @@ function App() {
             </a>{" "}
             with React, hosted on Github.{" "}
             <a href="https://github.com/dietbald/harmony-supply/">
-              PRs welcomed and appreciated ✨
+              PRs welcomed and appreciated. ✨
             </a>
           </p>
           <p>
@@ -221,12 +221,12 @@ function App() {
           </p>
 
           <p hidden={account === "Not connected"}>
-            {"Available in faucet balance: " +
+            {"Faucet balance: " +
               String(accountManager.getFormattedBalance(contractBalance, 18))}
           </p>
 
           <p hidden={account === "Not connected"}>
-            {"Available in distributor balance: " +
+            {"Distributor balance: " +
               String(
                 accountManager.getFormattedBalance(distributorBalance, 18)
               )}

@@ -58,6 +58,10 @@ background-position: 0% 50%
   display: flex;
   flex-direction: row;
   color: #1B295E;
+  margin-bottom: 1vw;
+  max-width: fit-content;
+  min-width: none;
+  margin:0 auto;
 }
 
 .App-header {
@@ -104,16 +108,13 @@ background-position: 0% 50%
 .App-logo {
   width: 10vh;
   height: auto;
-  pointer-events: none;
-  
+  pointer-events: none;  
 }
 
 .App-title {
-  font-size: 5.5vh;
-  font-weight: 600;
-  color: #000000;
-  -webkit-text-size-adjust: auto;
-  text-size-adjust: auto;
+  font-size: calc(1.7rem + 1vw) ;
+  font-weight: 500;
+  color: rgb(46, 43, 43);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,8 +126,7 @@ background-position: 0% 50%
 }
 
 .Commands {
-  /* margin-top: 10vh; */
-  
+  margin-top: 10vh;
   display: flex;
   flex-direction: row;
   width:50%;
@@ -145,13 +145,14 @@ background-position: 0% 50%
 @media only screen and (orientation: landscape) {
   .App-footer {
     width: 40vw;
-    font-size: .5vw;
+    font-size: calc(.5rem + .5vw) ;
+    
   }
 }
 
 @media only screen and (orientation: portrait) {
   .App-footer {
     width: 83vw;
-    font-size: 1.2vh;
+    font-size: calc(.5rem + .5vw) ;
   }
 }
