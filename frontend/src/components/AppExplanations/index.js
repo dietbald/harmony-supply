@@ -46,7 +46,7 @@ export default function AppExplanations() {
     Feel free to send some spare ONEs to `0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7` in order to replenish the faucet once you're rich.";
 
   const howToEarnMoreMatic_help =
-    "* Stake your ONEs on the Harmony blockchain and earn almost 10% APR on your coins. \n\
+    "* `Stake` your ONEs on the Harmony blockchain and earn almost 10% APR on your coins. \n\
     Staking helps decentralize and grow Harmony's Blockchain! In order to stake you need a compatible wallet with at least 100 ONEs in it. \n\
     Go to `https://staking.harmony.one/validators/mainnet` and select a validator on the list to begin staking! \n\
     We reccommend staking with `Intrepid.one | Community Validator` as their commission fees help fund the Harmony Faucet!";

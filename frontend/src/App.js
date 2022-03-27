@@ -170,6 +170,7 @@ function App() {
         <br/>
         <AppExplanations></AppExplanations>
         <div className="App-footer">
+           
            <div>
              <a
             href="https://staking.harmony.one/validators/mainnet/one1rfzf38ymc447qhmgrhcglewctl5nj9u6q6syjk"
@@ -193,7 +194,6 @@ function App() {
             </a>
            </div>
 
-          
           <p>
             A modest Web App built by{" "}
             <a

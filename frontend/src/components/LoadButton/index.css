@@ -14,7 +14,7 @@
   -webkit-animation: Gradient 19s ease infinite;
   -moz-animation: Gradient 19s ease infinite;
   animation: Gradient 19s ease infinite;
-  }
+}
 
 .paused {
   -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
@@ -24,7 +24,7 @@
 @-webkit-keyframes Gradient {
   0% {
   background-position: 0% 50%
-  }
+}
 50% {
 background-position: 100% 50%
 }
@@ -73,9 +73,10 @@ background-position: 0% 50%
   .BackupButton {
     width: 10vh;
     height: 5vh;
+    margin-top: 50px;
+    margin-bottom: 30px;
     font-size: 2vh;
     width:50%;
-  margin:0 auto;
   }
 }
 

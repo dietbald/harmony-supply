@@ -12,13 +12,13 @@ const particlesConfig = {
       }
     },
     "color": {
-      "value": "#272727"
+      "value": "#ffffff"
     },
     "shape": {
       "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#272727"
+        "color": "#ffffff"
       },
       "polygon": {
         "nb_sides": 5
@@ -40,7 +40,7 @@ const particlesConfig = {
       }
     },
     "size": {
-      "value": 3,
+      "value": 5,
       "random": true,
       "anim": {
         "enable": false,
@@ -52,13 +52,13 @@ const particlesConfig = {
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#272727",
-      "opacity": 0.4,
-      "width": 1
+      "color": "#ffffff",
+      "opacity": 1,
+      "width": 2
     },
     "move": {
       "enable": true,
-      "speed": 1,
+      "speed": .8,
       "direction": "random",
       "random": false,
       "straight": false,
