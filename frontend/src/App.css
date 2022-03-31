@@ -1,12 +1,9 @@
-
-.App {
-  text-align: center;
-}
-
 html {
-  color: #fff;
+  min-height: 100%;
+  background-attachment: fixed !important;
+  background-size: 400% 400% !important;
   background: linear-gradient(-45deg, rgb(0, 174, 233), rgba(105, 250, 189), rgb(0, 174, 233), rgba(105, 250, 189));
-  background-size: 1000% 1000%;
+  background-size: 10000px 10000px, cover;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
@@ -82,7 +79,6 @@ background-position: 0% 50%
   margin-right: 30px;
   pointer-events: all;
   width: 9%;
-  height: 12%;
   margin-top: 1vw;
 }
 
@@ -101,7 +97,6 @@ background-position: 0% 50%
   margin-right: 50px;
   pointer-events: all;
   width: 9%;
-  height: 11%;
   margin-top: 1vw;
 }
 
@@ -144,15 +139,27 @@ background-position: 0% 50%
 
 @media only screen and (orientation: landscape) {
   .App-footer {
+    min-height: 100%;
     width: 40vw;
     font-size: calc(.5rem + .5vw) ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
     
   }
 }
 
 @media only screen and (orientation: portrait) {
   .App-footer {
-    width: 83vw;
+    min-height: 100%;
+    min-width: 100%;
     font-size: calc(.5rem + .5vw) ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
 }
