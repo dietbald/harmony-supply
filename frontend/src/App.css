@@ -74,13 +74,6 @@ background-position: 0% 50%
   margin:0 auto;
 }
 
-.dietbaldLogo{
-  margin: 10px auto 20px;
-  margin-right: 30px;
-  pointer-events: all;
-  width: 9%;
-  margin-top: 1vw;
-}
 
 .intrepidLogo{
   margin: 10px auto 20px;
@@ -88,6 +81,14 @@ background-position: 0% 50%
   margin-right: 50px;
   pointer-events: all;
   width: 12%;
+  margin-top: 1vw;
+}
+
+.dietbaldLogo{
+  margin: 10px auto 20px;
+  margin-right: 30px;
+  pointer-events: all;
+  width: 9%;
   margin-top: 1vw;
 }
 

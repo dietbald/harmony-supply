@@ -3,7 +3,6 @@ pragma solidity ^0.6.12;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/access/Ownable.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/math/SafeMath.sol";
-
 contract HarmonySupplier is Ownable {
     using SafeMath for uint256;
 

@@ -179,7 +179,7 @@ function App() {
               <img src={intrepid} className="intrepidLogo" alt="logo"/>
              </a>
 
-            <a
+             <a
             href="https://github.com/dietbald"
               target="_blank"
               rel="noopener noreferrer">
@@ -193,8 +193,7 @@ function App() {
               <img src={harmony} className="harmonyLogo" alt="logo"/>
             </a>
            </div>
-
-          <p>
+           <p>
             A modest Web App built by{" "}
             <a
               href="https://github.com/dietbald"
@@ -209,7 +208,7 @@ function App() {
             </a>
           </p>
           <p>
-            App contributions and funding by:{" "}
+            Faucet funded by:{" "}
             <a
               h
               href="https://www.intrepidstaking.io/"
