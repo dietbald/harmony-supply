@@ -79,29 +79,33 @@ background-position: 0% 50%
 
 
 .intrepidLogo{
-  margin: 10px auto 20px;
-  margin-left: 30px;
-  margin-right: 50px;
+  margin: 0px auto 0px;
+  text-align: center;
+  padding: 10px;
   pointer-events: all;
   width: 12%;
-  margin-top: 1vw;
+  margin-top: 1vh;
+ 
 }
 
 .discordLogo{
-  margin: 10px auto 20px;
-  margin-right: 30px;
+  margin: 0px auto 0px;
+  text-align: center;
+  padding: 10px;
   pointer-events: all;
-  width: 9%;
-  margin-top: 1vw;
+  width: 8.5%;
+  margin-top: 1vh;
+
 }
 
 .harmonyLogo{
-  margin: 10px auto 20px;
-  margin-left: 30px;
-  margin-right: 50px;
+  margin: 0px auto 0px;
+  text-align: center;
+  padding: 10px;
   pointer-events: all;
-  width: 9%;
-  margin-top: 1vw;
+  width: 8.5%;
+  margin-top: 1vh;
+
 }
 
 .App-logo {
