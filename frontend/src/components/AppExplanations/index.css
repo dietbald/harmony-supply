@@ -4,7 +4,7 @@
     font: Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace;
     border: 2px solid rgba(134, 134, 134, 0.733);
     border-radius: 4px;
-}
+}   
 
 @media only screen and (orientation: landscape) {
   .accordion {
@@ -82,7 +82,7 @@
 .accordion__panel {
     padding: 20px;
     animation: fadein 0.35s ease-in;
-    font-size: 2vh;
+    font-size: 1.7vh;
 }
 
 code {

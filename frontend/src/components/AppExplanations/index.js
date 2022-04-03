@@ -46,7 +46,17 @@ export default function AppExplanations() {
     Feel free to send some spare ONEs to `0xf31822e40957fd71c102a112b53ccc2a4d4a7ec7` in order to replenish the faucet once you're rich.";
 
   const howToEarnMoreMatic_help =
-    "* `Stake` your ONEs on the Harmony blockchain and earn almost 10% APR on your coins. \n\
+  "* First bring your assets from Ethereum to Harmony through [the bridge](https://bridge.harmony.one/)  \n\
+  Then there's a variety of things you can do:  \n\
+  * Play [CryptoRoyale](https://cryptoroyale.one/) to earn the ROY token which can be swapped on [Viperswap](https://viper.exchange/) for ONE \n\
+  * Swap to other assets on [Sushiswap](https://app.sushi.com/swap), the equivalents of `Uniswap` on Harmony  \n\
+  [Openswap](https://app.openswap.one/) is also available and will route your swaps through the cheapest path.  \n\
+  * Depositing your assets on [Tranquil](https://app.tranquil.finance/) or [Curve](https://harmony.curve.fi/) to farm some fresh ONE  \n\
+  * Enjoy the same functionalities Ethereum has, only with less friction \n\
+  ";
+
+  const staking =
+  "* `Stake` your ONEs on the Harmony blockchain and earn almost 10% APR on your coins. \n\
     Staking helps decentralize and grow Harmony's Blockchain! In order to stake you need a compatible wallet with at least 100 ONEs in it. \n\
     Go to `https://staking.harmony.one/validators/mainnet` and select a validator on the list to begin staking! \n\
     We reccommend staking with `Intrepid.one | Community Validator` as their commission fees help fund the Harmony Faucet!";
@@ -84,6 +94,17 @@ export default function AppExplanations() {
           <ReactMarkdown
             className="Explanations"
             children={howToEarnMoreMatic_help}
+          ></ReactMarkdown>
+        </AccordionItemPanel>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionItemHeading>
+          <AccordionItemButton>Earn more with staking !</AccordionItemButton>
+        </AccordionItemHeading>
+        <AccordionItemPanel>
+          <ReactMarkdown
+            className="Explanations"
+            children={staking}
           ></ReactMarkdown>
         </AccordionItemPanel>
       </AccordionItem>
