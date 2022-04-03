@@ -40,8 +40,8 @@ const particlesConfig = {
       }
     },
     "size": {
-      "value": 5,
-      "random": true,
+      "value": 2,
+      "random": false,
       "anim": {
         "enable": false,
         "speed": 40,
@@ -54,7 +54,7 @@ const particlesConfig = {
       "distance": 150,
       "color": "#ffffff",
       "opacity": 1,
-      "width": 2
+      "width": 1
     },
     "move": {
       "enable": true,
