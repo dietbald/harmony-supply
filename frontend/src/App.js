@@ -172,7 +172,7 @@ function App() {
         <div className="App-footer">
            
            <div>
-             
+           
            <a
             href="https://discord.gg/aKbzKZ2wb8"
               target="_blank"
@@ -206,9 +206,6 @@ function App() {
               Dietbald 
             </a>{" "}
             with React, hosted on Github.{" "}
-            <a href="https://github.com/dietbald/harmony-supply/">
-              PRs welcomed and appreciated.
-            </a>
           </p>
           <p>
             Faucet sponsored by:{" "}
