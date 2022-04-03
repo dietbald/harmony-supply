@@ -13,7 +13,7 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Particles from "react-tsparticles";
 import particlesConfig from './components/ConfigParticles/particlesConfig';
 import intrepid from "./components/logos/intrepidlogo.png";
-import dietbald from "./components/logos/dietbaldlogo.png";
+import dietbald from "./components/logos/discordlogo.png";
 import harmony from "./components/logos/harmonylogo.png";
 
 
@@ -172,6 +172,15 @@ function App() {
         <div className="App-footer">
            
            <div>
+             
+           <a
+            href="https://discord.gg/aKbzKZ2wb8"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src={dietbald} className="discordLogo" alt="logo"/>
+            </a>
+
+
              <a
             href="https://staking.harmony.one/validators/mainnet/one1rfzf38ymc447qhmgrhcglewctl5nj9u6q6syjk"
               target="_blank"
@@ -179,12 +188,6 @@ function App() {
               <img src={intrepid} className="intrepidLogo" alt="logo"/>
              </a>
 
-             <a
-            href="https://github.com/dietbald"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img src={dietbald} className="dietbaldLogo" alt="logo"/>
-            </a>
 
             <a
             href="https://www.harmony.one/"
@@ -204,11 +207,11 @@ function App() {
             </a>{" "}
             with React, hosted on Github.{" "}
             <a href="https://github.com/dietbald/harmony-supply/">
-              PRs welcomed and appreciated. ✨
+              PRs welcomed and appreciated.
             </a>
           </p>
           <p>
-            Faucet funded by:{" "}
+            Faucet sponsored by:{" "}
             <a
               h
               href="https://www.intrepidstaking.io/"

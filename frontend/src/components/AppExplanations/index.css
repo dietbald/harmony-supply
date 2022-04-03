@@ -12,6 +12,7 @@
     font-size: 1.2vw;
     display: flex;
     flex-direction: column;
+    size: 10vh;
   }
 }
 
