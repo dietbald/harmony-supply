@@ -45,11 +45,11 @@ function App() {
         params={particlesConfig} />
       </div>
       <ToastContainer hideProgressBar={true} />
+      <header className="App-header">
       <div className="App-banner">
         <img src={logo} width="300" height="300" className="App-logo" alt="logo" />
         <p className="App-title">Harmony Faucet</p>
       </div>
-      <header className="App-header">
         <div className="Commands">
           <LoadButton
             text="Connect"
