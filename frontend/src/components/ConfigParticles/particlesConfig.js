@@ -19,7 +19,7 @@ const particlesConfig = {
     },
     modes: {
       push: { quantity: 4 },
-      attract: { distance: 200, duration: 0.4, factor: 5 }
+      attract: { distance: 150, duration: 0.4, factor: 3 }
     }
   },
   particles: {
@@ -41,7 +41,7 @@ const particlesConfig = {
       speed: 2,
       straight: false
     },
-    number: { density: { enable: true, value_area: 800 }, value: 80 },
+    number: { density: { enable: true, value_area: 800 }, value: 70 },
     opacity: {
       anim: { enable: false, opacity_min: 0.1, speed: 1, sync: false },
       random: false,
