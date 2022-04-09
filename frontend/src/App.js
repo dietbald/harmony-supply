@@ -1,4 +1,4 @@
-import logo from "./components/logos/logo.svg";
+import logo from "./components/logos/faucet.png";
 import "./App.css";
 import LoadButton from "./components/LoadButton";
 import AppExplanations from "./components/AppExplanations";
@@ -47,8 +47,7 @@ function App() {
       <ToastContainer hideProgressBar={true} />
       <header className="App-header">
       <div className="App-banner">
-        <img src={logo} width="300" height="300" className="App-logo" alt="logo" />
-        <p className="App-title">Harmony Faucet</p>
+        <img src={logo} className="App-logo" alt="logo" />
       </div>
         <div className="Commands">
           <LoadButton

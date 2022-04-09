@@ -1,8 +1,7 @@
 
 .accordion {
     text-align: left;
-    font: Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace;
-    border: 2px solid rgba(134, 134, 134, 0.733);
+    border: 0px solid rgba(134, 134, 134, 0.733);
     border-radius: 4px;
 }   
 
@@ -35,7 +34,7 @@
     background-color: rgb(46, 43, 43);
     color: #f4f4f4;
     cursor: pointer;
-    padding: 18px;
+    padding: 10px;
     text-align: left;
     border: none;
     transition: 0.3s;
