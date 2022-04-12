@@ -1,44 +1,46 @@
-/**
-* ----------------------------------------------
-* Demo styles
-* ----------------------------------------------
-**/
 
 .accordion {
     text-align: left;
-    font: Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace;
-    border: 5px solid rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-  }
+    border: 0px solid rgba(134, 134, 134, 0.733);
+    border-radius: 4px;
+    margin-top: 2%;
+    width: 100%;
+}   
 
 @media only screen and (orientation: landscape) {
   .accordion {
-    width: 70vw;
+    width: 40vw;
     font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    
   }
 }
 
 @media only screen and (orientation: portrait) {
   .accordion {
-    width: 90vw;
+    width: 100vw;
     font-size: 1.2vh;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 
 .accordion__item + .accordion__item {
-    border-top: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 3px solid rgba(133, 133, 133, 0.685);
     border-radius: 2px;
 }
 
 .accordion__button {
-    background-color: #758796;
+    background-color: rgb(46, 43, 43);
     color: #f4f4f4;
     cursor: pointer;
-    padding: 18px;
+    padding: 10px;
     text-align: left;
     border: none;
     transition: 0.3s;
+    opacity: 1; 
 }
 
 .accordion__button:hover {
@@ -51,8 +53,8 @@
     height: 1vh;
     width: 1vh;
     margin-right: 12px;
-    border-bottom: 2px solid currentColor;
-    border-right: 2px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    border-right: 1px solid currentColor;
     transform: rotate(-45deg);
 }
 
@@ -82,14 +84,15 @@
 .accordion__panel {
     padding: 20px;
     animation: fadein 0.35s ease-in;
+    font-size: 1.7vh;
 }
 
 code {
-    color: #00AEE9;
+  color: rgb(0, 174, 233);
 }
 
 a {
-  color: #00AEE9;
+  color: rgb(0, 174, 233);
 }
 
 /* -------------------------------------------------- */

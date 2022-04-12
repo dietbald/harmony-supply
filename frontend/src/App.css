@@ -1,41 +1,128 @@
-.App {
-  text-align: center;
+html {
+  min-height: 100%;
+  background-attachment: fixed !important;
+  background-size: 400% 400%, cover !important;
+  background: linear-gradient(-45deg, rgb(0, 174, 233), rgba(105, 250, 189), rgb(0, 174, 233), rgba(105, 250, 189));
+  -webkit-animation: Gradient 30s ease infinite;
+  -moz-animation: Gradient 30s ease infinite;
+  animation: Gradient 30s ease infinite;
 }
 
-html {
-  background-color: #ffffff;
+.paused {
+  -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+  animation-play-state: paused;
 }
+
+@-webkit-keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@-moz-keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+
+
+
 
 .App-banner {
-  margin-top: 7vh;
-  margin-bottom: 7vh;
   justify-content: center;
   display: flex;
   flex-direction: row;
-  max-height: 10vh;
-  color: #1B295E;
+  max-height: 14vh;
+  max-width: 50vh;
+  margin-bottom: 5%;
+  margin-top: -5%;
+  
+  
 }
 
 .App-header {
-  min-width: 100vw;
+  max-width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #1B295E;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50px;
+  margin: 5vh auto 0px;
+}
+
+
+
+
+
+.intrepidLogo{
+  margin: 0px auto 0px;
+  text-align: center;
+  padding: 10px;
+  pointer-events: all;
+  width: 12%;
+  margin-top: 1vh;
+}
+
+.discordLogo{
+  margin: 0px auto 0px;
+  text-align: center;
+  padding: 10px;
+  pointer-events: all;
+  width: 8.5%;
+  margin-top: 1vh;
+}
+
+.harmonyLogo{
+  margin: 0px auto 0px;
+  text-align: center;
+  padding: 10px;
+  pointer-events: all;
+  width: 8.5%;
+  height: auto;
+  margin-top: 1vh;
 }
 
 .App-logo {
-  width: 10vh;
-  height: auto;
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  
 }
 
 .App-title {
-  margin-left: 1.5vh;
-  font-size: 3vh;
-  font-weight: 1;
-  color: #00AEE9;
+  font-size: calc(1.7rem + 1vw) ;
+  font-weight: 500;
+  color: rgb(46, 43, 43);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-link {
@@ -43,10 +130,11 @@ html {
 }
 
 .Commands {
-  /* margin-top: 10vh; */
-  margin-bottom: 6vh;
+  margin-top: 10vh;
   display: flex;
   flex-direction: row;
+  width:50%;
+  margin:0 auto;
 }
 
 .Toastify__toast-container {
@@ -54,20 +142,33 @@ html {
 }
 
 .App-footer a {
-  color: #61dafb;
+  color: rgb(0, 174, 233);
   text-decoration: none;
 }
 
 @media only screen and (orientation: landscape) {
   .App-footer {
-    margin-top: 4vh;
-    font-size: 1.2vh;
+    min-height: 100%;
+    width: 40vw;
+    font-size: calc(.7rem + .4vw) ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    
   }
 }
 
 @media only screen and (orientation: portrait) {
   .App-footer {
-    margin-top: 4vw;
-    font-size: 1.2vw;
+    min-height: 100%;
+    min-width: 100%;
+    font-size: calc(.5rem + .5vw) ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
 }
