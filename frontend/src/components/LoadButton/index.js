@@ -17,7 +17,6 @@ function LoadButton({ text, loadingText, color, disabled, hidden, onClick }) {
       disabled={isLoading | disabled}
       onClick={isLoading ? null : onTriggerRun}
       style={{
-        margin: "10px",
         backgroundColor: color,
         display: hidden ? "none" : true,
       }}
